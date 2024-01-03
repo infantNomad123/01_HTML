@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h3>입력된 이름: <span id = "entered-name"></span></h3>
+    <h3>입력된 비밀번호: <span id = "entered-pw"></span></h3>
+    <script>
+        const params = new URL(location.href).searchParams;
+        const nameinput = document.getElementById("entered-name");
+
+        nameinput.innerHTML = params.get("name");
+    </script>
+    <script>
+        
+        const pwinput = document.getElementById("entered-pw");
+        pwinput.innerHTML = params.get("password");
+    </script>
+</body>
+</html>
